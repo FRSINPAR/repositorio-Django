@@ -1,0 +1,27 @@
+<!-- templates/list_afipcodigos.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Códigos AFIP</title>
+</head>
+<body>
+    <h1>Lista de Códigos AFIP</h1>
+    <table border="1">
+        <tr>
+            <th>Afip Código</th>
+            <th>Descripción</th>
+            <th>Punto IVA</th>
+        </tr>
+        {% for afipcodigo in afipcodigos %}
+        <tr>
+            <td>{{ afipcodigo.afipcodigo }}</td>
+            <td>{{ afipcodigo.descripcion }}</td>
+            <td>{{ afipcodigo.puntipoiva }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

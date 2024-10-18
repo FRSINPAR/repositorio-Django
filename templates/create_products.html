@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Productos creados</title>
+</head>
+<body>
+    <h1>Lista de productos creados</h1>
+    <ul>
+        {% for producto in productos %}
+            <li>Nombre: {{ producto.nombre }} - Calidad: {{ producto.calidad }} - Precio: ${{ producto.precio }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

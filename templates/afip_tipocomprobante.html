@@ -1,0 +1,39 @@
+<!-- templates/list_afipcodigos.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Códigos AFIP TIPO COMPROBANTE</title>
+</head>
+<body>
+    <h1>Lista de Códigos AFIP TIPO COMPROBANTE</h1>
+    <table border="1">
+        <tr>
+            <th>Tipo ABC</th>
+            <th>Tipo Comprobante</th>
+            <th>Afip nro</th>
+            <th>Adm Cai</th>
+            <th>RG</th>
+            <th>FCE</th>
+            <th>Descripcion</th>
+            <th>Codigo Arciba</th>
+            
+        </tr>
+        {% for afiptipocomprobante in afiptipocomprobantes %}
+        <tr>
+            <td>{{ afiptipocomprobante.tipoabc }}</td>
+            <td>{{ afiptipocomprobante.tipocomprobante }}</td>
+            <td>{{ afiptipocomprobante.afiptipocomprobante }}</td>
+            <td>{{ afiptipocomprobante.admitecai }}</td>
+            <td>{{ afiptipocomprobante.rg3685afiptipo }}</td>
+            <td>{{ afiptipocomprobante.fce }}</td>
+            <td>{{ afiptipocomprobante.afipdescripcion }}</td>
+            <td>{{ afiptipocomprobante.codigoarciba }}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

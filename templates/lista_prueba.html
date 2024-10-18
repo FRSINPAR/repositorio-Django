@@ -1,0 +1,30 @@
+<!-- templates/list_products.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <table border="1">
+        <tr>
+            <th>punSistema</th>
+            <th>Descripcion</th>
+            <th>ArchivoExe</th>
+            <th>Titulo</th>
+        </tr>
+        {% for dato in datos %}
+        <tr>
+            <td>{{ dato.punSistema }}</td>
+            <td>{{ dato.Descripcion }}</td>
+            <td>{{ dato.ArchivoExe }}</td>
+            <td>{{ dato.Title }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {{datos}}
+</body>
+</html>
